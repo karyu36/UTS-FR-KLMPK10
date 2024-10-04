@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css?faily=Monserrat:500');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #24252a;
+}
+
+li,a,button{
+    font-family: "Monserrat",sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: transparent; /* Mengubah latar belakang menjadi transparan */
+}
+
+.logo{
+    cursor: pointer;
+}
+
+.nav_links{
+    list-style: none;
+}
+
+.nav_links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a {
+    font-family: "Monserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #0088a9; /* Warna biru untuk teks */
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid #0088a9; /* Garis tepi biru */
+    border-radius: 25px; /* Membuat sudut lebih bulat */
+    transition: all 0.3s ease 0s;
+    background-color: transparent;
+    display: inline-block;
+}
+
+.nav_links li a:hover {
+    background-color: #0088a9;
+    color: #ffffff; /* Warna putih saat hover */
+    box-shadow: 0 0 10px rgba(0, 136, 169, 0.5); /* Efek bayangan saat hover */
+}
+
+.nav_links li a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, #ff3366, #00ccff, #33cc33, #ff9933);
+    background-size: 400% 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 20px; /* Meningkatkan border-radius untuk efek lebih membulat */
+}
+
+.nav_links li a:hover::before {
+    opacity: 1;
+}
+
+.nav_links li a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
+                 0 0 20px rgba(255, 255, 255, 0.8), 
+                 0 0 30px rgba(255, 255, 255, 0.8); /* Meningkatkan efek glow saat hover */
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+button{
+    padding: 9px 25px;
+    background-color: #0088a9;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    color: #ffffff; /* Memastikan teks tombol berwarna putih */
+}
+
+button:hover{
+    background-color: rgba(0, 136, 169, 0.8);
+}
+
+#slideshow-container {
+    width: 100%;
+    height: 500px; /* Sesuaikan tinggi slideshow sesuai kebutuhan */
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 100%; /* Mulai dari luar layar di sebelah kanan */
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: left 1s ease-in-out; /* Transisi untuk efek geser */
+}
+
+.slide.active {
+    left: 0; /* Posisi aktif di tengah layar */
+}
+
+.slide.prev {
+    left: -100%; /* Geser ke kiri setelah tidak aktif */
+}
+
+.slide-text {
+    color: white;
+    font-size: 3em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding: 15px;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    right: 10%;
+    max-width: 80%;
+    background-color: transparent; /* Membuat latar belakang sepenuhnya transparan */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* Menambahkan bayangan teks untuk keterbacaan */
+}
+
+.heading{
+    font-size: 4rem;
+    text-align: center;
+    margin: 5rem 0;
+}
+
+.fashion-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.fashion-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: 300px;
+}
+
+.fashion-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+    text-align: left;
+}
+
+.fashion-card h3 {
+    color: #8B0000; /* Warna merah tua */
+    margin: 0 0 5px 0;
+    font-size: 1.2em;
+}
+
+.fashion-card .position {
+    color: #333;
+    margin: 0 0 10px 0;
+    font-weight: bold;
+}
+
+.fashion-card .description {
+    color: #666;
+    font-size: 0.9em;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.heading {
+    text-align: center;
+    margin: 40px 0;
+    color: #333;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-y: scroll;
+}
+
+.nav_links a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.nav_links a:hover {
+    color: #8B0000; /* Warna merah tua saat hover */
+}
+
+section {
+    min-height: 100vh; /* Memastikan setiap section memiliki tinggi minimal satu layar penuh */
+    
+    box-sizing: border-box;
+}
+
