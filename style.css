@@ -1,21 +1,21 @@
-@import url('https://fonts.googleapis.com/css?faily=Monserrat:500');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     background-color: #24252a;
 }
 
-li,a,button{
-    font-family: "Monserrat",sans-serif;
+li, a, button {
+    font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 16px;
     color: #edf0f1;
     text-decoration: none;
 }
 
-header{
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,21 +23,21 @@ header{
     background-color: transparent; /* Mengubah latar belakang menjadi transparan */
 }
 
-.logo{
+.logo {
     cursor: pointer;
 }
 
-.nav_links{
+.nav_links {
     list-style: none;
 }
 
-.nav_links li{
+.nav_links li {
     display: inline-block;
     padding: 0px 20px;
 }
 
 .nav_links li a {
-    font-family: "Monserrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 16px;
     color: #0088a9; /* Warna biru untuk teks */
@@ -48,6 +48,7 @@ header{
     transition: all 0.3s ease 0s;
     background-color: transparent;
     display: inline-block;
+    position: relative;
 }
 
 .nav_links li a:hover {
@@ -92,7 +93,7 @@ header{
     100% { background-position: 0 0; }
 }
 
-button{
+button {
     padding: 9px 25px;
     background-color: #0088a9;
     border: none;
@@ -102,7 +103,7 @@ button{
     color: #ffffff; /* Memastikan teks tombol berwarna putih */
 }
 
-button:hover{
+button:hover {
     background-color: rgba(0, 136, 169, 0.8);
 }
 
@@ -147,7 +148,7 @@ button:hover{
     text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* Menambahkan bayangan teks untuk keterbacaan */
 }
 
-.heading{
+.heading {
     font-size: 4rem;
     text-align: center;
     margin: 5rem 0;
@@ -199,10 +200,70 @@ button:hover{
     margin: 0;
 }
 
+/* Untuk menghilangkan space putih di sekitar container */
+.health-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0px; /* Mengatur gap menjadi 0 untuk menghilangkan space antar card */
+    padding: 0px; /* Menghapus padding di sekitar container */
+    margin: 0 auto; /* Menyeimbangkan container di tengah */
+}
+
+/* Menghilangkan margin dan padding di card */
+.health-card {
+    margin: 0; /* Menghapus margin di sekitar card */
+    padding: 0; /* Menghapus padding dalam card */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: 300px;
+}
+
+/* Mengatur padding dan margin dalam content */
+.health-card .card-content {
+    padding: 15px; /* Sesuaikan padding dalam card sesuai kebutuhan */
+    text-align: left;
+}
+
+.health-card h3 {
+    color: #8B0000;
+    margin: 5px 0; /* Kurangi margin di bagian judul */
+    font-size: 1.2em;
+}
+
+.health-card p {
+    color: #666;
+    font-size: 0.9em;
+    line-height: 1.4;
+    margin: 0; /* Hapus margin di paragraf */
+}
+
+/* Menghilangkan space putih pada section Health secara keseluruhan */
+section.health {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .heading {
     text-align: center;
     margin: 40px 0;
     color: #333;
+}
+
+.health-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
 }
 
 html {
@@ -213,19 +274,7 @@ body {
     overflow-y: scroll;
 }
 
-.nav_links a {
-    text-decoration: none;
-    color: #333;
-    transition: color 0.3s ease;
-}
-
-.nav_links a:hover {
-    color: #8B0000; /* Warna merah tua saat hover */
-}
-
 section {
     min-height: 100vh; /* Memastikan setiap section memiliki tinggi minimal satu layar penuh */
-    
     box-sizing: border-box;
 }
-
