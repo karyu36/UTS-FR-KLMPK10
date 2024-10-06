@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const slideshowContainer = document.getElementById('slideshow-container');
     const slides = [
         { image: 'G1.jpg', text: 'Temukan Gaya Fashion Terbaru' },
-        { image: 'G2.jpg', text: 'Koleksi Musim Panas yang Trendy' },
+        { image: 'Trend.jpg', text: 'Koleksi Musim Panas yang Trendy' },
         { image: 'G3.jpg', text: 'Aksesori untuk Gaya Anda' }
     ];
     let currentSlideIndex = 0;
@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function createSlideElement(slide) {
         const slideElement = document.createElement('div');
         slideElement.style.backgroundImage = `url('image/${slide.image}')`;
+        slideElement.style.backgroundPosition = 'center 20%'; // Mengubah posisi background
         slideElement.classList.add('slide');
         
         const textElement = document.createElement('h2');
