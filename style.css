@@ -20,7 +20,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 30px 10%;
-    background-color: transparent; /* Mengubah latar belakang menjadi transparan */
+    background-color: transparent;
 }
 
 .logo {
@@ -40,11 +40,11 @@ header {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 16px;
-    color: #0088a9; /* Warna biru untuk teks */
+    color: #0088a9;
     text-decoration: none;
     padding: 10px 20px;
-    border: 2px solid #0088a9; /* Garis tepi biru */
-    border-radius: 25px; /* Membuat sudut lebih bulat */
+    border: 2px solid #0088a9;
+    border-radius: 25px;
     transition: all 0.3s ease 0s;
     background-color: transparent;
     display: inline-block;
@@ -53,8 +53,8 @@ header {
 
 .nav_links li a:hover {
     background-color: #0088a9;
-    color: #ffffff; /* Warna putih saat hover */
-    box-shadow: 0 0 10px rgba(0, 136, 169, 0.5); /* Efek bayangan saat hover */
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 136, 169, 0.5);
 }
 
 .nav_links li a::before {
@@ -73,7 +73,7 @@ header {
     animation: glowing 20s linear infinite;
     opacity: 0;
     transition: opacity .3s ease-in-out;
-    border-radius: 20px; /* Meningkatkan border-radius untuk efek lebih membulat */
+    border-radius: 20px;
 }
 
 .nav_links li a:hover::before {
@@ -84,7 +84,7 @@ header {
     color: #fff;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
                  0 0 20px rgba(255, 255, 255, 0.8), 
-                 0 0 30px rgba(255, 255, 255, 0.8); /* Meningkatkan efek glow saat hover */
+                 0 0 30px rgba(255, 255, 255, 0.8);
 }
 
 @keyframes glowing {
@@ -100,7 +100,7 @@ button {
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
-    color: #ffffff; /* Memastikan teks tombol berwarna putih */
+    color: #ffffff;
 }
 
 button:hover {
@@ -109,7 +109,7 @@ button:hover {
 
 #slideshow-container {
     width: 100%;
-    height: 500px; /* Sesuaikan tinggi slideshow sesuai kebutuhan */
+    height: 500px;
     position: relative;
     overflow: hidden;
 }
@@ -117,26 +117,26 @@ button:hover {
 .slide {
     position: absolute;
     top: 0;
-    left: 100%; /* Mulai dari luar layar di sebelah kanan */
+    left: 100%;
     width: 100%;
     height: 100%;
     background-size: cover;
     background-position: center;
-    transition: left 1s ease-in-out; /* Transisi untuk efek geser */
+    transition: left 1s ease-in-out;
 }
 
 .slide.active {
-    left: 0; /* Posisi aktif di tengah layar */
+    left: 0;
 }
 
 .slide.prev {
-    left: -100%; /* Geser ke kiri setelah tidak aktif */
+    left: -100%;
 }
 
 .slide-text {
     color: white;
     font-size: 3em;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', Geneva, sans-serif;
     text-align: center;
     padding: 15px;
     position: absolute;
@@ -144,8 +144,8 @@ button:hover {
     left: 10%;
     right: 10%;
     max-width: 80%;
-    background-color: transparent; /* Membuat latar belakang sepenuhnya transparan */
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* Menambahkan bayangan teks untuk keterbacaan */
+    background-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
 }
 
 .heading {
@@ -182,7 +182,7 @@ button:hover {
 }
 
 .fashion-card h3 {
-    color: #8B0000; /* Warna merah tua */
+    color: #8B0000;
     margin: 0 0 5px 0;
     font-size: 1.2em;
 }
@@ -200,81 +200,74 @@ button:hover {
     margin: 0;
 }
 
-/* Untuk menghilangkan space putih di sekitar container */
+/* Untuk Health Section */
 .health-container {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0px; /* Mengatur gap menjadi 0 untuk menghilangkan space antar card */
-    padding: 0px; /* Menghapus padding di sekitar container */
-    margin: 0 auto; /* Menyeimbangkan container di tengah */
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: #24252a;
 }
 
-/* Menghilangkan margin dan padding di card */
 .health-card {
-    margin: 0; /* Menghapus margin di sekitar card */
-    padding: 0; /* Menghapus padding dalam card */
-    background-color: #fff;
+    display: flex;
+    align-items: center;
+    background-color: #24252a;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     overflow: hidden;
-    width: 300px;
+    border: 2px solid #0088a9;
+    padding: 20px;
+    width: 100%;
+    transition: all 0.3s ease;
 }
 
-/* Mengatur padding dan margin dalam content */
-.health-card .card-content {
-    padding: 15px; /* Sesuaikan padding dalam card sesuai kebutuhan */
+/* Atur gambar agar lebih kecil */
+.health-card img {
+    width: 20%; /* Mengurangi lebar gambar */
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Atur konten deskripsi */
+.card-content {
+    width: 80%;
     text-align: left;
+    padding: 0 20px;
 }
 
+/* Judul dan teks */
 .health-card h3 {
-    color: #8B0000;
-    margin: 5px 0; /* Kurangi margin di bagian judul */
-    font-size: 1.2em;
+    color: #edf0f1;
+    margin: 5px 0;
+    font-size: 1.5em;
 }
 
 .health-card p {
-    color: #666;
-    font-size: 0.9em;
-    line-height: 1.4;
-    margin: 0; /* Hapus margin di paragraf */
+    color: #edf0f1;
+    font-size: 1em;
+    line-height: 1.6;
 }
 
-/* Menghilangkan space putih pada section Health secara keseluruhan */
+/* Mengatur posisi gambar di sebelah kiri pada kartu genap */
+.health-card:nth-child(even) {
+    flex-direction: row;
+}
+
+/* Posisi gambar di sebelah kanan pada kartu ganjil */
+.health-card:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+/* Latar belakang Health section */
 section.health {
-    margin: 0;
-    padding: 0;
+    padding: 40px 0;
+    background-color: #24252a;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.heading {
-    text-align: center;
-    margin: 40px 0;
-    color: #333;
-}
-
-.health-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    overflow-y: scroll;
-}
-
-section {
-    min-height: 100vh; /* Memastikan setiap section memiliki tinggi minimal satu layar penuh */
-    box-sizing: border-box;
+/* Transisi halus saat hover */
+.health-card:hover {
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
