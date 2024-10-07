@@ -154,50 +154,154 @@ button:hover {
     margin: 5rem 0;
 }
 
-.fashion-container {
+/* Ad Section */
+.ad-section {
+    padding: 20px 0; /* Reduced padding */
+    background-color: #24252a;
+}
+
+.ad-container {
     display: flex;
+    max-width: 900px; /* Reduced max-width */
+    margin: 0 auto;
+    background-color: #0088a9;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.ad-content {
+    flex: 1;
+    padding: 30px; /* Reduced padding */
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    background-color: transparent;
+}
+
+.ad-content h2 {
+    font-size: 2em; /* Reduced font size */
+    color: #ffffff;
+    margin-bottom: 15px; /* Reduced margin */
+    background-color: transparent;
+}
+
+.ad-content p {
+    font-size: 1em; /* Reduced font size */
+    color: #ffffff;
+    margin-bottom: 20px; /* Reduced margin */
+    background-color: transparent;
+}
+
+.ad-button {
+    align-self: flex-start;
+    padding: 8px 16px; /* Reduced padding */
+    font-size: 0.9em; /* Reduced font size */
+    color: #0088a9;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.ad-button:hover {
+    background-color: #edf0f1;
+    transform: scale(1.05);
+}
+
+.ad-image {
+    flex: 1;
+    background-color: transparent;
+}
+
+.ad-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Fashion Section */
+.fashion-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
     padding: 20px;
+    margin: 0 auto;
+    background-color: #24252a;
 }
 
 .fashion-card {
-    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    background-color: #24252a;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     overflow: hidden;
-    width: 300px;
+    border: 2px solid #0088a9;
+    transition: all 0.3s ease;
+}
+
+.fashion-card .image-container {
+    width: 100%;
+    height: 300px; /* Set a fixed height for all image containers */
+    overflow: hidden;
 }
 
 .fashion-card img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: 100%;
+    object-fit: cover; /* This will ensure the image covers the container without distortion */
+    transition: transform 0.3s ease;
 }
 
-.card-content {
-    padding: 15px;
+/* Specific adjustment for the third fashion card image */
+.fashion-card:nth-child(3) img {
+    object-position: center 30%; /* Adjust this value as needed */
+}
+
+.fashion-card:hover img {
+    transform: scale(1.05);
+}
+
+.fashion-card .card-content {
+    padding: 20px;
     text-align: left;
 }
 
 .fashion-card h3 {
-    color: #8B0000;
-    margin: 0 0 5px 0;
-    font-size: 1.2em;
+    color: #edf0f1;
+    margin: 0 0 10px 0;
+    font-size: 1.5em;
 }
 
 .fashion-card .position {
-    color: #333;
+    color: #0088a9;
     margin: 0 0 10px 0;
     font-weight: bold;
 }
 
 .fashion-card .description {
-    color: #666;
-    font-size: 0.9em;
-    line-height: 1.4;
-    margin: 0;
+    color: #edf0f1;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+section.fashion {
+    padding: 40px 0;
+    background-color: #24252a;
+}
+
+.fashion-card:hover {
+    box-shadow: 0 6px 12px rgba(0,136,169,0.3);
+}
+
+/* Remove these styles as they're no longer needed */
+.fashion-card:nth-child(even),
+.fashion-card:nth-child(odd) {
+    flex-direction: column;
 }
 
 /* Untuk Health Section */
@@ -271,3 +375,4 @@ section.health {
 .health-card:hover {
     box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
+
