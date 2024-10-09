@@ -251,60 +251,61 @@ section.fashion {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 20px;
-    margin: 0 auto;
-    background-color: #24252a;
 }
 
 .health-card {
+    background-color: #333; /* Warna latar belakang gelap */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid #555; /* Menambahkan border */
+}
+
+.health-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.health-card-inner {
     display: flex;
     align-items: center;
-    background-color: #24252a;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    overflow: hidden;
-    border: 2px solid #0088a9;
-    padding: 20px;
-    width: 100%;
-    transition: all 0.3s ease;
 }
 
-/* Atur gambar agar lebih kecil */
-.health-card img {
-    width: 20%; /* Mengurangi lebar gambar */
+.health-image {
+    flex: 0 0 30%; /* Mengurangi ukuran gambar */
+    padding: 10px; /* Menambahkan sedikit padding */
+}
+
+.health-image img {
+    width: 90%;
     height: auto;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 8px; /* Membuat gambar sedikit melengkung */
 }
 
-/* Atur konten deskripsi */
 .card-content {
-    width: 80%;
-    text-align: left;
-    padding: 0 20px;
+    flex: 1;
+    padding: 20px;
+    color: #fff; /* Mengubah warna teks menjadi putih */
 }
 
-/* Judul dan teks */
-.health-card h3 {
-    color: #edf0f1;
-    margin: 5px 0;
-    font-size: 1.5em;
+.card-content h3 {
+    margin-top: 0;
+    color: #fff; /* Mengubah warna judul menjadi putih */
 }
 
-.health-card p {
-    color: #edf0f1;
-    font-size: 1em;
-    line-height: 1.6;
+.card-content p {
+    color: #ddd; /* Mengubah warna paragraf menjadi sedikit lebih gelap dari putih */
 }
 
-/* Mengatur posisi gambar di sebelah kiri pada kartu genap */
-.health-card:nth-child(even) {
-    flex-direction: row;
-}
+@media (max-width: 768px) {
+    .health-card-inner {
+        flex-direction: column;
+    }
 
-/* Posisi gambar di sebelah kanan pada kartu ganjil */
-.health-card:nth-child(odd) {
-    flex-direction: row-reverse;
+    .health-image {
+        flex: 0 0 100%;
+    }
 }
 
 /* Latar belakang Health section */
