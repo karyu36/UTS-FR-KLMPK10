@@ -115,4 +115,22 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    let lastScrollTop = 0;
+    const header = document.querySelector('header');
+    const headerHeight = header.offsetHeight;
+
+    window.addEventListener('scroll', function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (scrollTop > lastScrollTop) {
+            // Scroll ke bawah
+            header.style.top = `-${headerHeight}px`;
+        } else {
+            // Scroll ke atas
+            header.style.top = '0';
+        }
+        
+        lastScrollTop = scrollTop;
+    });
 });

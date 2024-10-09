@@ -16,11 +16,17 @@ li, a, button {
 }
 
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #24252a; /* Sesuaikan dengan warna latar belakang yang diinginkan */
+    padding: 20px 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 10%;
-    background-color: transparent;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Opsional: menambahkan bayangan */
 }
 
 .logo {
@@ -66,7 +72,6 @@ header {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(45deg, #ff3366, #00ccff, #33cc33, #ff9933);
     background-size: 400% 400%;
     z-index: -1;
     filter: blur(5px);
