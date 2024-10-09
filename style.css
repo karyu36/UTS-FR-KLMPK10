@@ -24,6 +24,8 @@ header {
 }
 
 .logo {
+    width: 100px; /* Sesuaikan ukuran ini sesuai kebutuhan */
+    height: auto; /* Ini akan menjaga rasio aspek gambar */
     cursor: pointer;
 }
 
@@ -109,7 +111,7 @@ button:hover {
 
 #slideshow-container {
     width: 100%;
-    height: 500px;
+    height: 800px;
     position: relative;
     overflow: hidden;
 }
@@ -270,4 +272,39 @@ section.health {
 /* Transisi halus saat hover */
 .health-card:hover {
     box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.lifestyle-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #24252a;
+}
+
+.lifestyle-heading {
+    font-family: "Montserrat", sans-serif;
+    font-size: 4rem;
+    color: #edf0f1;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.lifestyle-description {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
+    color: #edf0f1;
+    text-align: center;
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+/* Jika Anda ingin logo lebih kecil pada layar mobile, tambahkan media query */
+@media screen and (max-width: 768px) {
+    .logo {
+        width: 80px; /* Ukuran lebih kecil untuk layar mobile */
+    }
 }
