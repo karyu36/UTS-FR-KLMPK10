@@ -318,7 +318,6 @@ section.health {
     box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
-<<<<<<< HEAD
 /* Ad Section */
 .ad-section {
     padding: 40px 0;
@@ -433,8 +432,7 @@ section.health {
     max-width: 100%;
     height: auto;
 }
-=======
-<<<<<<< HEAD
+
 .lifestyle-section {
     display: flex;
     flex-direction: column;
@@ -455,11 +453,13 @@ section.health {
 }
 
 .lifestyle-description {
+    text-align: center;
+    max-width: 800px; /* Sesuaikan dengan lebar yang diinginkan */
+    margin: 0 auto; /* Ini akan memusatkan blok teks */
+    padding: 0 20px; /* Memberikan sedikit ruang di sisi kiri dan kanan */
+    color: #edf0f1; /* Warna teks, sesuaikan dengan desain Anda */
     font-family: "Montserrat", sans-serif;
     font-size: 1.2rem;
-    color: #edf0f1;
-    text-align: center;
-    max-width: 800px;
     line-height: 1.6;
 }
 
@@ -469,6 +469,26 @@ section.health {
         width: 80px; /* Ukuran lebih kecil untuk layar mobile */
     }
 }
-=======
->>>>>>> 2643937b2c2e4506b8b9c494cf63235a87cb8dec
->>>>>>> bf382dc0476c9c234b5a23c8af56ef7ba7c42b5e
+
+.lifestyle-image {
+    margin-bottom: 30px; /* Sesuaikan nilai ini untuk mengatur jarak */
+}
+
+.lifestyle-heading {
+    margin-bottom: 20px; /* Jarak antara judul dan deskripsi */
+}
+
+.lifestyle-description {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    color: #edf0f1;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+html {
+    scroll-behavior: smooth;
+}
