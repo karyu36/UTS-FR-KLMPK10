@@ -62,4 +62,38 @@ document.addEventListener('DOMContentLoaded', function() {
     // Inisialisasi slideshow
     showNextSlide();
     setInterval(showNextSlide, 5000); // Ganti slide setiap 5 detik
+
+    // Fungsi modal untuk fashion cards
+    const fashionCards = document.querySelectorAll('.fashion-card');
+    const modal = document.getElementById('fashionModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalImage = document.getElementById('modalImage');
+    const modalDescription = document.getElementById('modalDescription');
+    const closeBtn = document.querySelector('.close');
+
+    fashionCards.forEach(card => {
+        const cardContent = card.querySelector('.card-content');
+
+        cardContent.addEventListener('click', function() {
+            const title = this.querySelector('h3').textContent;
+            const imageSrc = card.querySelector('img').src;
+            const description = this.querySelector('.description').textContent;
+
+            modalTitle.textContent = title;
+            modalImage.src = imageSrc;
+            modalDescription.textContent = description;
+
+            modal.style.display = 'block';
+        });
+    });
+
+    closeBtn.onclick = function() {
+        modal.style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    }
 });
