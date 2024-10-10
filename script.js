@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Kode untuk slideshow
     const slideshowContainer = document.getElementById('slideshow-container');
     const slides = [
-        { image: 'G1.jpg', text: 'Temukan Gaya Fashion Terbaru' },
-        { image: 'Trend.jpg', text: 'Koleksi Musim Panas yang Trendy' },
+        { image: 'Trend.jpg', text: 'Temukan Gaya Fashion Terbaru' },
+        { image: 'yukata.jpg', text: 'Koleksi Musim Panas yang Trendy' },
         { image: 'Ring.jpeg', text: 'Aksesori untuk Gaya Anda' },
         { image: 'Food.jpeg', text:'Tips Kesehatan untuk menjaga tubuh' }
     ];

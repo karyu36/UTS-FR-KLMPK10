@@ -498,3 +498,68 @@ section.health {
 html {
     scroll-behavior: smooth;
 }
+
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.social-icons {
+    margin-bottom: 15px;
+    background: #000000;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 10px;
+    color: #ffffff;
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+.social-icon ion-icon {
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 50%;
+    padding: 5px;
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover ion-icon {
+    transform: scale(1.2) rotate(360deg);
+    background-color: #0088a9; /* Warna biru yang sesuai dengan tema situs Anda */
+    color: #ffffff;
+}
+
+.footer-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background: #000000;
+}
+
+.footer-nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.footer-nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    background: #000000;
+}
+
+/* Menambahkan style untuk ikon sosial media */
+.social-icon ion-icon {
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 50%;
+    padding: 5px;
+    width: 24px;
+    height: 24px;
+}
