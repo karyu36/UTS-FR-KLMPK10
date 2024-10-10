@@ -1,21 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500');
 
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 100px; /* Sesuaikan dengan tinggi header Anda */
-}
-
-body {
-    scroll-behavior: smooth;
-}
-
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     background-color: #24252a;
-    /* Hapus atau komentari baris berikut jika ada */
-    /* scroll-behavior: smooth; */
 }
 
 li, a, button {
@@ -27,11 +16,30 @@ li, a, button {
 }
 
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 30px 10%;
-    background-color: transparent;
+    background-color: #24252a;
+    transition: transform 0.3s ease-in-out;
+}
+
+.header--hidden {
+    transform: translateY(-100%);
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px; /* Sesuaikan dengan tinggi header Anda */
+}
+
+body {
+    padding-top: 80px; /* Sesuaikan dengan tinggi header Anda */
 }
 
 .logo {
@@ -294,15 +302,20 @@ section.fashion {
 }
 
 /* Atur gambar agar lebih kecil */
-.health-card img {
+.health-card .image-container {
     width: 20%; /* Mengurangi lebar gambar */
+    height: auto;
+}
+
+.health-card .image-container img {
+    width: 100%;
     height: auto;
     object-fit: cover;
     border-radius: 10px;
 }
 
 /* Atur konten deskripsi */
-.card-content {
+.health-card .card-content {
     width: 80%;
     text-align: left;
     padding: 0 20px;
@@ -650,4 +663,26 @@ footer {
     transition: color 0.3s ease; /* Transisi halus untuk efek hover */
 }
 
+.image-container {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
 
+.health-container .image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+html, body {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding-top: 80px; /* Sesuaikan dengan tinggi header Anda */
+}
+
+#home-slideshow {
+    scroll-margin-top: 80px; /* Sesuaikan dengan tinggi header Anda */
+}
