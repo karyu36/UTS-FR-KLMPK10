@@ -1,10 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500');
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px; /* Sesuaikan dengan tinggi header Anda */
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     background-color: #24252a;
+    /* Hapus atau komentari baris berikut jika ada */
+    /* scroll-behavior: smooth; */
 }
 
 li, a, button {
@@ -16,17 +27,11 @@ li, a, button {
 }
 
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: #24252a; /* Sesuaikan dengan warna latar belakang yang diinginkan */
-    padding: 20px 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Opsional: menambahkan bayangan */
+    padding: 30px 10%;
+    background-color: transparent;
 }
 
 .logo {
@@ -72,6 +77,7 @@ header {
     left: 0;
     right: 0;
     bottom: 0;
+    background: linear-gradient(45deg, #ff3366, #00ccff, #33cc33, #ff9933);
     background-size: 400% 400%;
     z-index: -1;
     filter: blur(5px);
@@ -156,9 +162,13 @@ button:hover {
 }
 
 .heading {
+    font-family: "Montserrat", sans-serif;
     font-size: 4rem;
+    color: #edf0f1;
     text-align: center;
-    margin: 5rem 0;
+    margin: 5rem 0 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 /* Fashion Section */
@@ -183,6 +193,7 @@ button:hover {
     transition: all 0.3s ease;
     cursor: pointer;
     height: 100%; /* Ensure all cards have the same height */
+    position: relative;
 }
 
 .fashion-card .image-container {
@@ -234,6 +245,14 @@ button:hover {
 .fashion-card-link {
     display: flex;
     height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    z-index: 1;
 }
 
 section.fashion {
@@ -256,61 +275,60 @@ section.fashion {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: #24252a;
 }
 
 .health-card {
-    background-color: #333; /* Warna latar belakang gelap */
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border: 2px solid #555; /* Menambahkan border */
-}
-
-.health-card a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.health-card-inner {
     display: flex;
     align-items: center;
+    background-color: #24252a;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    border: 2px solid #0088a9;
+    padding: 20px;
+    width: 100%;
+    transition: all 0.3s ease;
 }
 
-.health-image {
-    flex: 0 0 30%; /* Mengurangi ukuran gambar */
-    padding: 10px; /* Menambahkan sedikit padding */
-}
-
-.health-image img {
-    width: 90%;
+/* Atur gambar agar lebih kecil */
+.health-card img {
+    width: 20%; /* Mengurangi lebar gambar */
     height: auto;
     object-fit: cover;
-    border-radius: 8px; /* Membuat gambar sedikit melengkung */
+    border-radius: 10px;
 }
 
+/* Atur konten deskripsi */
 .card-content {
-    flex: 1;
-    padding: 20px;
-    color: #fff; /* Mengubah warna teks menjadi putih */
+    width: 80%;
+    text-align: left;
+    padding: 0 20px;
 }
 
-.card-content h3 {
-    margin-top: 0;
-    color: #fff; /* Mengubah warna judul menjadi putih */
+/* Judul dan teks */
+.health-card h3 {
+    color: #edf0f1;
+    margin: 5px 0;
+    font-size: 1.5em;
 }
 
-.card-content p {
-    color: #ddd; /* Mengubah warna paragraf menjadi sedikit lebih gelap dari putih */
+.health-card p {
+    color: #edf0f1;
+    font-size: 1em;
+    line-height: 1.6;
 }
 
-@media (max-width: 768px) {
-    .health-card-inner {
-        flex-direction: column;
-    }
+/* Mengatur posisi gambar di sebelah kiri pada kartu genap */
+.health-card:nth-child(even) {
+    flex-direction: row;
+}
 
-    .health-image {
-        flex: 0 0 100%;
-    }
+/* Posisi gambar di sebelah kanan pada kartu ganjil */
+.health-card:nth-child(odd) {
+    flex-direction: row-reverse;
 }
 
 /* Latar belakang Health section */
@@ -322,6 +340,38 @@ section.health {
 /* Transisi halus saat hover */
 .health-card:hover {
     box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.health-card {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.health-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.health-card:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.health-card:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.health-card:nth-child(4) {
+    animation-delay: 0.7s;
 }
 
 /* Ad Section */
@@ -459,13 +509,11 @@ section.health {
 }
 
 .lifestyle-description {
-    text-align: center;
-    max-width: 800px; /* Sesuaikan dengan lebar yang diinginkan */
-    margin: 0 auto; /* Ini akan memusatkan blok teks */
-    padding: 0 20px; /* Memberikan sedikit ruang di sisi kiri dan kanan */
-    color: #edf0f1; /* Warna teks, sesuaikan dengan desain Anda */
     font-family: "Montserrat", sans-serif;
     font-size: 1.2rem;
+    color: #edf0f1;
+    text-align: center;
+    max-width: 800px;
     line-height: 1.6;
 }
 
@@ -476,27 +524,20 @@ section.health {
     }
 }
 
-.lifestyle-image {
-    margin-bottom: 30px; /* Sesuaikan nilai ini untuk mengatur jarak */
+section {
+    padding: 20px;
 }
 
-.lifestyle-heading {
-    margin-bottom: 20px; /* Jarak antara judul dan deskripsi */
-}
-
-.lifestyle-description {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 20px;
-    color: #edf0f1;
-    font-family: "Montserrat", sans-serif;
-    font-size: 1.2rem;
-    line-height: 1.6;
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
 }
 
 html {
+    --scroll-behavior: smooth;
     scroll-behavior: smooth;
+
 }
 
 footer {
@@ -563,3 +604,50 @@ footer {
     width: 24px;
     height: 24px;
 }
+
+
+.fashion-description,
+.health-description {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
+    color: #edf0f1;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+}
+
+/* Update existing styles for consistency */
+.heading {
+    font-family: "Montserrat", sans-serif;
+    font-size: 4rem;
+    color: #edf0f1;
+    text-align: center;
+    margin: 5rem 0 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+
+
+/* Tambahkan atau ubah aturan CSS berikut */
+
+.fashion .heading,
+.health .heading {
+    color: #ffffff; /* Mengubah warna teks menjadi putih */
+    text-align: center; /* Memastikan judul berada di tengah */
+    margin-bottom: 30px; /* Menambahkan sedikit ruang di bawah judul */
+    font-size: 2.5em; /* Menyesuaikan ukuran font, sesuaikan sesuai kebutuhan */
+    font-weight: bold; /* Membuat teks lebih tebal */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Menambahkan bayangan untuk meningkatkan keterbacaan */
+}
+
+/* Jika Anda ingin menambahkan efek hover */
+.fashion .heading:hover,
+.health .heading:hover {
+    color: #f0f0f0; /* Sedikit lebih gelap saat di-hover */
+    transition: color 0.3s ease; /* Transisi halus untuk efek hover */
+}
+
+
