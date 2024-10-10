@@ -436,8 +436,8 @@ section.health {
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
-    text-decoration: none; /* Add this to remove underline from link */
-    display: inline-block; /* Add this to make it behave like a button */
+    text-decoration: none; 
+    display: inline-block; 
 }
 
 .ad-button:hover {
@@ -456,7 +456,7 @@ section.health {
     object-fit: cover;
 }
 
-/* ... rest of the existing styles ... */
+
 
 .fashion-card {
     cursor: pointer;
@@ -530,10 +530,10 @@ section.health {
     line-height: 1.6;
 }
 
-/* Jika Anda ingin logo lebih kecil pada layar mobile, tambahkan media query */
+
 @media screen and (max-width: 768px) {
     .logo {
-        width: 80px; /* Ukuran lebih kecil untuk layar mobile */
+        width: 80px; 
     }
 }
 
@@ -585,7 +585,7 @@ footer {
 
 .social-icon:hover ion-icon {
     transform: scale(1.2) rotate(360deg);
-    background-color: #0088a9; /* Warna biru yang sesuai dengan tema situs Anda */
+    background-color: #0088a9; 
     color: #ffffff;
 }
 
@@ -608,7 +608,6 @@ footer {
     background: #000000;
 }
 
-/* Menambahkan style untuk ikon sosial media */
 .social-icon ion-icon {
     background-color: #ffffff;
     color: #000000;
@@ -630,7 +629,7 @@ footer {
     line-height: 1.6;
 }
 
-/* Update existing styles for consistency */
+
 .heading {
     font-family: "Montserrat", sans-serif;
     font-size: 4rem;
@@ -644,23 +643,22 @@ footer {
 
 
 
-/* Tambahkan atau ubah aturan CSS berikut */
 
 .fashion .heading,
 .health .heading {
-    color: #ffffff; /* Mengubah warna teks menjadi putih */
-    text-align: center; /* Memastikan judul berada di tengah */
-    margin-bottom: 30px; /* Menambahkan sedikit ruang di bawah judul */
-    font-size: 2.5em; /* Menyesuaikan ukuran font, sesuaikan sesuai kebutuhan */
-    font-weight: bold; /* Membuat teks lebih tebal */
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Menambahkan bayangan untuk meningkatkan keterbacaan */
+    color: #ffffff; 
+    text-align: center; 
+    margin-bottom: 30px; 
+    font-size: 2.5em; 
+    font-weight: bold; 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
 }
 
-/* Jika Anda ingin menambahkan efek hover */
+
 .fashion .heading:hover,
 .health .heading:hover {
-    color: #f0f0f0; /* Sedikit lebih gelap saat di-hover */
-    transition: color 0.3s ease; /* Transisi halus untuk efek hover */
+    color: #f0f0f0; 
+    transition: color 0.3s ease; 
 }
 
 .image-container {
@@ -680,9 +678,9 @@ html, body {
 }
 
 body {
-    padding-top: 80px; /* Sesuaikan dengan tinggi header Anda */
+    padding-top: 80px; 
 }
 
 #home-slideshow {
-    scroll-margin-top: 80px; /* Sesuaikan dengan tinggi header Anda */
+    scroll-margin-top: 80px; 
 }
