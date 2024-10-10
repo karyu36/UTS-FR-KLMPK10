@@ -342,6 +342,38 @@ section.health {
     box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.health-card {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.health-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.health-card:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.health-card:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.health-card:nth-child(4) {
+    animation-delay: 0.7s;
+}
+
 /* Ad Section */
 .ad-section {
     padding: 40px 0;
@@ -505,6 +537,7 @@ section {
 html {
     --scroll-behavior: smooth;
     scroll-behavior: smooth;
+
     transition: all 1.5s; /* Sesuaikan durasi di sini */
 }
 
@@ -528,5 +561,27 @@ html {
     margin: 5rem 0 2rem;
     text-transform: uppercase;
     letter-spacing: 2px;
+}
+
+
+
+
+/* Tambahkan atau ubah aturan CSS berikut */
+
+.fashion .heading,
+.health .heading {
+    color: #ffffff; /* Mengubah warna teks menjadi putih */
+    text-align: center; /* Memastikan judul berada di tengah */
+    margin-bottom: 30px; /* Menambahkan sedikit ruang di bawah judul */
+    font-size: 2.5em; /* Menyesuaikan ukuran font, sesuaikan sesuai kebutuhan */
+    font-weight: bold; /* Membuat teks lebih tebal */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Menambahkan bayangan untuk meningkatkan keterbacaan */
+}
+
+/* Jika Anda ingin menambahkan efek hover */
+.fashion .heading:hover,
+.health .heading:hover {
+    color: #f0f0f0; /* Sedikit lebih gelap saat di-hover */
+    transition: color 0.3s ease; /* Transisi halus untuk efek hover */
 }
 
